@@ -64,7 +64,6 @@ class Layer:
 
     def update(self, learning_rate: float):
         """descente de gradient"""
-        "gradient descent"
         assert self.dw is not None and self.db is not None
         self.W = self.W - learning_rate * self.dw
         self.B = self.B - learning_rate * self.db
@@ -117,10 +116,6 @@ class Network:
 
 
                 for layer in reversed(self.layers):
-                    # if not np.all(np.isfinite(f)):
-                    #     print("NaN détecté en sortie du forward, batch", mini_batch)
-                    #     print("max/min de z par couche:", [ (layer.z.min(), layer.z.max()) for layer in self.layers])
-                    #     break
                     error = layer.backward(error)
 
                 for layer in self.layers:

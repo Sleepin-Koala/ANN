@@ -135,7 +135,7 @@ class KoalaMNIST(ctk.CTk):
     def clear_canvas(self):
         self.canvas.clear()
         self.result_number.configure(text="?")
-        self.result_sub.configure(text="dessine quelque chose")
+        self.result_sub.configure(text="dessine quelque chose (un chiffre a la fois please)")
 
 
 if __name__ == "__main__":

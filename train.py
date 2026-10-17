@@ -18,9 +18,8 @@ f = Network(config=((784,512),(512,256),(256,10)),
             f= ["relu" ,"relu" ,"softmax"])
 
 f.fit(X_train , Y_train , epochs=40 , learning_rate=0.1, batch_size=32)
-# np.savez("modele.npz", layers = f.layers)
+np.savez("modele.npz", layers = f.layers)
 
-# joblib.dump(f , "mnist.sr")
 
 
 

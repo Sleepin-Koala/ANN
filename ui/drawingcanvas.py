@@ -3,13 +3,13 @@ from tkinter import Canvas
 from PIL import Image, ImageDraw
 
 class DrawingCanvas(Canvas):
-    SIZE = 8          # trait plus épais = plus lisible pour un réseau
-    COLOR = "#1a1a2e"  # encre sombre, pas noir pur
+    SIZE = 8          
+    COLOR = "#1a1a2e" 
 
     def __init__(self, frame: ctk.CTkFrame):
         super().__init__(
             frame,
-            bg="#f8f8f5",          # blanc cassé, moins agressif que #ffffff
+            bg="#f8f8f5",       
             width=260,
             height=260,
             highlightthickness=0,
